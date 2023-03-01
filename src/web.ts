@@ -1,13 +1,29 @@
-import { WebPlugin } from '@capacitor/core';
+import {WebPlugin} from '@capacitor/core';
 
-import type { HealthConnectPluginPlugin } from './definitions';
+import type {AllowedResult, HealthConnectPlugin} from './definitions';
 
-export class HealthConnectPluginWeb
-  extends WebPlugin
-  implements HealthConnectPluginPlugin
-{
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
-  }
+export class HealthConnectPluginWeb extends WebPlugin implements HealthConnectPlugin {
+
+    constructor() {
+        super({
+            name: 'HealthConnect',
+            platforms: ['web'],
+        });
+    }
+
+    async connectToHealthConnect(): Promise<void> {
+        throw new Error('Method not implemented.');
+    }
+
+    async isAllowed(): Promise<AllowedResult> {
+        throw new Error('Method not implemented.');
+    }
+
+    async getHistory(): Promise<any> {
+        throw new Error('Method not implemented.');
+    }
+
+    async getHistoryActivity(): Promise<any> {
+        throw new Error('Method not implemented.');
+    }
 }
