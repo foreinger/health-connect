@@ -1,8 +1,11 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { ExamplePlugin } from './definitions';
+import type { HealthConnectPluginPlugin } from './definitions';
 
-export class ExampleWeb extends WebPlugin implements ExamplePlugin {
+export class HealthConnectPluginWeb
+  extends WebPlugin
+  implements HealthConnectPluginPlugin
+{
   async echo(options: { value: string }): Promise<{ value: string }> {
     console.log('ECHO', options);
     return options;

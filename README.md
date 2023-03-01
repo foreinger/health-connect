@@ -1,11 +1,11 @@
-# health-connect-semper
+# health-connect
 
-Plugin to receive health data with health-connect SDK
+Health connect plugin
 
 ## Install
 
 ```bash
-npm install health-connect-semper
+npm install health-connect
 npx cap sync
 ```
 

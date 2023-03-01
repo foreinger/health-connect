@@ -1,7 +1,7 @@
 {
-  "name": "health-connect-semper",
+  "name": "health-connect",
   "version": "0.0.1",
-  "description": "Plugin to receive health data with health-connect SDK",
+  "description": "Health connect plugin",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -11,16 +11,16 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "HealthConnectSemper.podspec"
+    "HealthConnect.podspec"
   ],
-  "author": "alex.m",
+  "author": "me",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/foreinger/health-connect.git.git"
+    "url": "git+https://github.com/foreinger/health-connect.git"
   },
   "bugs": {
-    "url": "https://github.com/foreinger/health-connect.git/issues"
+    "url": "https://github.com/foreinger/health-connect/issues"
   },
   "keywords": [
     "capacitor",
@@ -37,7 +37,7 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api ExamplePlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api HealthConnectPluginPlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",

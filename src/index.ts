@@ -1,10 +1,13 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { ExamplePlugin } from './definitions';
+import type { HealthConnectPluginPlugin } from './definitions';
 
-const Example = registerPlugin<ExamplePlugin>('Example', {
-  web: () => import('./web').then(m => new m.ExampleWeb()),
-});
+const HealthConnectPlugin = registerPlugin<HealthConnectPluginPlugin>(
+  'HealthConnectPlugin',
+  {
+    web: () => import('./web').then(m => new m.HealthConnectPluginWeb()),
+  },
+);
 
 export * from './definitions';
-export { Example };
+export { HealthConnectPlugin };
